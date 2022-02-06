@@ -1,6 +1,6 @@
 This is the basic Express App
 
-We created iot using the following Commands
+We created it using the following Commands
 
 ```
 npm init

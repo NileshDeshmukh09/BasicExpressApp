@@ -1,17 +1,10 @@
+const express  = require("express");
+const router = express.Router();
 
-const express = require('express');
-  
-const app = express();
-const PORT = 3000;
+function dummyController(req, res){
+    return  res.send({ message: "Working Fine"});
+}
 
-app.get('/',(req,res)=>{
-    res.send("Hello ,World !");
-})
-  
-app.listen(PORT, (error) =>{
-    if(!error)
-        console.log(`Server is Successfully Running, and App is listening on https://localhost:${PORT}`);
-    else 
-        console.log("Error occured, server can't start", error);
-    }
-);
+router.get("/test", dummyController);
+
+module.exports = router;
