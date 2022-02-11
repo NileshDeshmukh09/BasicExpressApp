@@ -6,7 +6,7 @@ function testingGet(req,res){
 function testingPost( req ,res){
     let data = req.body;
     console.log(data , req.body);
-    testModel.testModelFunction(data , function(errr, result){
+    testModel.testModelFunction(data , function(err, result){
         if(err){
             console.log(err);
             return res.status(500).send({
