@@ -1,10 +1,9 @@
 const express  = require("express");
 const router = express.Router();
+const testController = require("../../../src/controllers/testController");
 
-function dummyController(req, res){
-    return  res.send({ message: "Working Fine"});
-}
 
-router.get("/test", dummyController);
+router.get("/test", testController.testingGet);
+router.post("/test", testController.testingPost);
 
 module.exports = router;
